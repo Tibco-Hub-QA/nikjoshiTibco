@@ -1,0 +1,71 @@
+openapi: "3.0.3"
+info:
+  title: "${{ values.name }}-API"
+  description: "API For ${{ values.description }}"
+  version: "1"
+tags: []
+paths:
+  /endpoint:
+    get:
+      summary: ""
+      description: ""
+      parameters: []
+      responses:
+        200:
+          description: "success response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Output"
+              example:
+                - msg: "success"
+          headers: {}
+    post:
+      summary: ""
+      description: ""
+      parameters: []
+      responses:
+        200:
+          description: "success response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Output"
+              example:
+                - msg: "success"
+          headers: {}
+      requestBody:
+        description: ""
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Input"
+            example: []
+components:
+  schemas:
+    Input:
+      type: "object"
+      properties:
+        input:
+          type: "object"
+          properties:
+            Field1:
+              type: "string"
+              default: "string"
+            Field2:
+              type: "string"
+              default: "string"
+      description: "Input Description"
+    Output:
+      type: "object"
+      properties:
+        output:
+          type: "object"
+          properties:
+            Field1:
+              type: "string"
+              default: "string"
+            Field2:
+              type: "string"
+              default: "string"
+      description: "Output Description"

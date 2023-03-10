@@ -1,0 +1,131 @@
+{
+    "name": "${{ values.name }}",
+    "description": "${{ values.description }}",
+    "version": "1.0.0",
+    "type": "flogo",
+    "resources": {
+        "physicalMemory": 1024,
+        "totalMemory": 4096,
+        "cpuQuota": 25
+    },
+    "endpoints": [
+        {
+            "name": "AppHealthCheck",
+            "pingable": true,
+            "protocol": "http",
+            "port": "7777",
+            "type": "private",
+            "ping": "/ping"
+        },
+        {
+            "protocol": "http",
+            "port": "9999",
+            "spec": {
+                "name": "New_Flogo_App_5",
+                "version": "1.0.0"
+            },
+            "title": "ReceiveHTTPMessage",
+            "swagger": {
+                "openapi": "3.0.0",
+                "info": {
+                    "title": "New_Flogo_App_5",
+                    "version": "1.0.0",
+                    "description": "Simple REST Trigger"
+                },
+                "paths": {
+                    "/endpoint": {
+                        "get": {
+                            "summary": "_GET",
+                            "operationId": "get_endpoint",
+                            "parameters": [],
+                            "responses": {
+                                "200": {
+                                    "description": "",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "$ref": "#/components/schemas/schema1"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "post": {
+                            "summary": "_POST",
+                            "operationId": "post_endpoint",
+                            "parameters": [],
+                            "responses": {
+                                "200": {
+                                    "description": "",
+                                    "content": {
+                                        "application/json": {
+                                            "schema": {
+                                                "$ref": "#/components/schemas/schema1"
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "requestBody": {
+                                "description": "",
+                                "required": false,
+                                "content": {
+                                    "application/json": {
+                                        "schema": {
+                                            "$ref": "#/components/schemas/schema2"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "components": {
+                    "schemas": {
+                        "schema1": {
+                            "type": "object",
+                            "properties": {
+                                "output": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Field1": {
+                                            "type": "string",
+                                            "default": "string"
+                                        },
+                                        "Field2": {
+                                            "type": "string",
+                                            "default": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Output Description"
+                        },
+                        "schema2": {
+                            "type": "object",
+                            "properties": {
+                                "input": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Field1": {
+                                            "type": "string",
+                                            "default": "string"
+                                        },
+                                        "Field2": {
+                                            "type": "string",
+                                            "default": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "description": "Input Description"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "propertyPrefix": "TCI_FLOGO_USER_",
+    "properties": []
+}
