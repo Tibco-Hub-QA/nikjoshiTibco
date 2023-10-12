@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: flogo-template
-  title: Flogo Template
+  title: Flogo Templates
   description: Create a new Flogo project with Documentation
   tags:
     - recommended
