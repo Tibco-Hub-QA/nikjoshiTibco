@@ -28,7 +28,7 @@ spec:
           title: Description
           type: string
           description: A description for the Flogo Service  *This is a test*
-        description:
+        description-1:
           title: Description-1
           type: string
           description: A description for the Flogo Service  *This is a test*
