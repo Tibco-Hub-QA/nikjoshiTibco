@@ -2,7 +2,7 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: flogo-template
-  title: Flogo Templates
+  title: Flogo Template
   description: Create a new Flogo project with Documentation
   tags:
     - recommended
@@ -21,17 +21,21 @@ spec:
         name:
           title: Name
           type: string
-          description: Unique name of the Flogo Service
-          ui:field: EntityNamePicker
-          ui:autofocus: true
+          description: Unique name of the Flogo Service *this is a test*
+          ui:field: EntityNamePicker *this is a test*
+          ui:autofocus: false
         description:
           title: Description
           type: string
-          description: A description for the Flogo Service
+          description: A description for the Flogo Service *this is a test*
+        description-2:
+          title: Description-2
+          type: string
+          description: A description for the Flogo Service *this is a test*
         owner:
           title: Owner
           type: string
-          description: Owner of the component
+          description: Owner of the component *this is a test*
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
@@ -41,9 +45,9 @@ spec:
         - repoUrl
       properties:
         repoUrl:
-          title: Repository Location
+          title: Repository Location *this is a test*
           type: string
-          ui:field: RepoUrlPicker
+          ui:field: RepoUrlPicker 
           ui:options:
             allowedHosts:
               - github.com
