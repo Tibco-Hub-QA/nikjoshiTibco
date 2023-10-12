@@ -21,21 +21,17 @@ spec:
         name:
           title: Name
           type: string
-          description: Unique name of the Flogo Service *this is a test*
-          ui:field: EntityNamePicker *this is a test*
-          ui:autofocus: false
+          description: Unique name of the Flogo Service
+          ui:field: EntityNamePicker
+          ui:autofocus: true
         description:
           title: Description
           type: string
-          description: A description for the Flogo Service *this is a test*
-        description-2:
-          title: Description-2
-          type: string
-          description: A description for the Flogo Service *this is a test*
+          description: A description for the Flogo Service
         owner:
           title: Owner
           type: string
-          description: Owner of the component *this is a test*
+          description: Owner of the component
           ui:field: OwnerPicker
           ui:options:
             allowedKinds:
@@ -45,7 +41,7 @@ spec:
         - repoUrl
       properties:
         repoUrl:
-          title: Repository Location *this is a test*
+          title: Repository Location
           type: string
           ui:field: RepoUrlPicker 
           ui:options:
