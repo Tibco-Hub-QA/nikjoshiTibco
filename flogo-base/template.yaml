@@ -3,7 +3,7 @@ kind: Template
 metadata:
   name: fedex-flogo-template
   title: FedEx Flogo Template
-  description: Create a new FedEx scheduler using FedEx flogo template
+  description: Create a new Flogo project with Documentation
   tags:
     - recommended
     - flogo
@@ -28,10 +28,6 @@ spec:
           title: Description
           type: string
           description: A description for the Flogo Service
-        hub-location:
-          title: Hub Location
-          type: string
-          description: A Hub Location, where this service will be deployed
         owner:
           title: Owner
           type: string
