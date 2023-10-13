@@ -2,8 +2,8 @@ apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
   name: flogo-template
-  title: Flogo Template
-  description: Create a new Flogo project with Documentation
+  title: FedEx Flogo Template
+  description: Create a new FedEx scheduler
   tags:
     - recommended
     - flogo
@@ -13,7 +13,7 @@ spec:
   type: service
 
   parameters:
-    - title: Fill in some steps
+    - title: Fill in some stes
       required:
         - name
         - description
@@ -28,6 +28,10 @@ spec:
           title: Description
           type: string
           description: A description for the Flogo Service
+        hub-location:
+          title: Hub Location
+          type: string
+          description: A Hub Location where this service will be deployed
         owner:
           title: Owner
           type: string
