@@ -1,8 +1,8 @@
 apiVersion: scaffolder.backstage.io/v1beta3
 kind: Template
 metadata:
-  name: fedex-flogo-template
-  title: FedEx Flogo Template
+  name: flogo-template
+  title: Flogo Template
   description: Create a new Flogo project with Documentation
   tags:
     - recommended
